@@ -12,6 +12,5 @@ window = windows[0]
 
 while 1:
     coords = getMouseCoordsWindow(window)
-    print(coords)
-    print(getPixelColorWindow(window, coords[0], coords[1]))
+    print(coords, getPixelColorWindow(window, coords[0], coords[1]))
     time.sleep(3)

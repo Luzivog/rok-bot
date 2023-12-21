@@ -5,8 +5,12 @@ import cv2
 import numpy as np
 from utils import *
 from config import *
-import time
+from time import sleep
 import random
+import pytesseract
+from PIL import Image
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 windows = pygetwindow.getWindowsWithTitle('BlueStacks -')
 
@@ -17,3 +21,5 @@ if len(windows) == 0:
 window = windows[0]
 window.activate()
 
+waitSumPixelColorWindow(window, 120, 771, 660)
+print("hoi")
